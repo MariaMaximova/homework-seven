@@ -17,9 +17,6 @@ class Fraction:
         """initiate fraction"""
         self.numerator, self.denominator = numerator, denominator
 
-    def __eq__(self, other):
-        return self.numerator * other.denominator == self.denominator * other.numerator
-
     def __add__(self, other):
         """initiate add"""
         top, bottom = self.numerator * other.denominator + other.numerator * self.denominator, self.denominator * other.denominator
