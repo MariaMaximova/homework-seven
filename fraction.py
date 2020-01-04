@@ -23,8 +23,8 @@ class Fraction:
     def __add__(self, other):
         """initiate add"""
         top, bottom = self.numerator * other.denominator + other.numerator * self.denominator, self.denominator * other.denominator
-        reduce = gcd(top, bottom)
-        return Fraction(top//reduce, bottom//reduce)
+        smallest = gcd(top, bottom)
+        return Fraction(top // smallest, bottom // smallest)
 
     def __mul__(self, other):
         """initiate multiply"""
@@ -33,8 +33,8 @@ class Fraction:
     def __sub__(self, other):
         """initiate subvision"""
         top, bottom = self.numerator * other.denominator - other.numerator * self.denominator, self.denominator * other.denominator
-        reduce = gcd(top, bottom)
-        return Fraction(top // reduce, bottom // reduce)
+        smallest = gcd(top, bottom)
+        return Fraction(top // smallest, bottom // smallest)
 
     def __truediv__(self, other):
         """initiate division"""
