@@ -39,6 +39,10 @@ class Fraction:
     def __truediv__(self, other):
         """initiate division"""
         return Fraction(self.numerator * other.denominator, self.denominator * other.numerator)
+    
+    def __pow__(self, power):
+        """initiate a power"""
+        return Fraction(self.numerator ** power, self.denominator ** power)
 
     def __str__(self):
         """return all results"""
@@ -53,3 +57,4 @@ if __name__ == "__main__":
     print(Fraction(40, 70))
     print(Fraction(1, 6) + Fraction(1, 3))
     print(Fraction(1, 2) + Fraction(3, 4) + Fraction(1, 9) * Fraction(3, 5))
+    print(Fraction(5, 7)**2)
